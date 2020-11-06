@@ -1,0 +1,2 @@
+module CheeseRecipesHelper
+end
