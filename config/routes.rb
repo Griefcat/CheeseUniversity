@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/', to: 'application#home'
+  get '/', to: 'application#home', as: "home"
   get '/about', to: 'application#about'
   
   resources :courses

@@ -1,0 +1,8 @@
+<h1>Our Instructors</h1>
+
+<% @instructors.each do |instructor|%>
+    <div><%=link_to instructor.instructor_name, instructor_path(instructor.id)%></div>
+
+    <%end%>
+<br>
+
