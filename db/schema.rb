@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_11_09_160612) do
     t.text "ingredients"
     t.string "name"
     t.integer "cheese_id"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

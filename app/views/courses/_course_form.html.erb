@@ -1,3 +1,9 @@
+<%if @course.errors.any?%>
+    <%@course.errors.full_messages.each do |m|%>
+        <div><%=m%></div>
+    <%end%>
+<%end%>
+
 <%=form_for @course do |f|%>
 <%=f.label :name%>
 <%=f.text_field :name%><br>

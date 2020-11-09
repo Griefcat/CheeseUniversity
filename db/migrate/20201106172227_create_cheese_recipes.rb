@@ -5,7 +5,7 @@ class CreateCheeseRecipes < ActiveRecord::Migration[6.0]
       t.text :ingredients
       t.string :name
       t.integer :cheese_id
-
+      t.string :image
       t.timestamps
     end
   end

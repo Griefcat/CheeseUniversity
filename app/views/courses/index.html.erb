@@ -2,9 +2,11 @@
 
 <%@courses.each do |course|%>
     <div><%=link_to course.name, course_path(course.id)%></div>
-    <div><img src=<%=course.image%>></div>
+    <div><img src=<%=course.image%>% alt='making a mozzarella' width=250px %></div>
     <div><%=course.description%></div>
     <%end%>
+
+    <%=link_to "create a course", new_course_path(@course)%>
 
 
     

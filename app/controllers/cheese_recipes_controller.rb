@@ -13,8 +13,13 @@ class CheeseRecipesController < ApplicationController
     end
 
     def create
-        @cheese_recipe = CheeseRecipe.create(cheese_recipe_params)
-        redirect_to cheese_recipe_path(@cheese_recipe)
+        @cheese_recipe = CheeseRecipe.new(cheese_recipe_params)
+        if @cheese_recipe.valid?
+            @cheese_recipe.save
+            redirect_to cheese_recipe_path(@cheese_recipe)
+        else
+            render 'new'
+        end
 
     end
 
@@ -41,6 +46,6 @@ class CheeseRecipesController < ApplicationController
     end
 
     def cheese_recipe_params
-        params.require(:cheese_recipe).permit(:name, :ingredients, :directions, :cheese_id)
+        params.require(:cheese_recipe).permit(:name, :ingredients, :directions, :cheese_id, :image)
     end
 end
