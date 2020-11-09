@@ -19,6 +19,8 @@ image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Mozzarella_di_
 
 instructor1 = Instructor.create(instructor_name: "Waldemar Albrecht", specialty: "Fresh cheese", email: Faker::Internet.email, biography: "Waldemar Albrecht studied law and business administration in his native Venezuela. After immigrating to the US to follow his passion for gastronomy and culinaria, he received training in cheese from industry leaders like Debra Dickerson, Janet Tarlov, Daphne Zepos, and Juliana Uruburu. Managing the cheese counter at the acclaimed Pasta Shop from 1998 through 2002. In May 2003, Waldemar moved to New York City to become a full time Maitre Fromager at Artisanal restaurant, as well as member of the faculty at Artisanal Premium Cheese, nurturing his education through his mentor and friend Max McCalman. Currently, Waldemar works as a spokesperson for Lactalis-USA, conducts food tours with friend and partner Clarisa Penzini, and is the cheese buyer for the Battery Place Markets in Manhattan.", image_url: "https://cdn.shopify.com/s/files/1/0307/2417/files/Waldemar_Albrecht.jpg?1744" )
 
+instructor2 = Instructor.create(instructor_name: "Kirstin Jackson", specialty: "Semi-soft cheese", email: Faker::Internet.email, biography: "Kirstin Jackson is the author of \'Its Not You, Its Brie: A Guide to Unwrapping American Cheese Culture\' and has written about cheese and wine for publications like the LA Times, NPR, and Kinfolk. When not writing, she manages a wine bar, teaches, consults, travels, and writes about cheese for her blog, itsnotyouitsbrie.com. She blames her parents, who took her on monthly trips to California creameries as a child, for inspiring her obsession with cheese.", image_url: "https://cdn.shopify.com/s/files/1/0307/2417/files/Kristin_Jackson.jpg?1789")
+
 recipe1 = CheeseRecipe.create(name: "Eggplant Rollatini", ingredients: "
 
 1 large eggplant, sliced into 1/2-inch thick slices
@@ -40,9 +42,6 @@ After the eggplant has cooled, spoon 1-2 Tablespoons of vegetable filling on egg
 Spoon sauce over eggplant, sprinkle with mozzarella. Cover and bake for 30 minutes, then uncover and bake for 10 minutes. 
 ", cheese_id: cheese1.id, image: "https://cdn.shopify.com/s/files/1/0307/2417/files/55ED29C4-9970-471D-8CB0-38DB6F4DF7E5_1200x.jpg?v=1589324707")
 
-
-
-user1 = User.create(username: "Cheese Guy1", email: "cheese@cheese.com")
 
 course1 = Course.create(name: "Mozzarella Making", image: "https://cdn.thewhoot.com/wp-content/uploads/2020/05/homemade-mozzarella-recipe-.jpg", cheese_id: cheese1.id, instructor_id: instructor1.id, description: "$90 per person including shipping and handling.*
 1-hour tasting class by Zoom with an instructor featuring:

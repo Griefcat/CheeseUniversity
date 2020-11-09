@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get '/', to: 'application#home', as: "home"
   get '/about', to: 'application#about'
+  get '/login', to: 'logins#new', as: "login"
+  get '/signup', to: 'users#new', as: "new_user"
+  post '/signup', to: 'users#create'
   
   resources :courses
   resources :cheese_recipes
