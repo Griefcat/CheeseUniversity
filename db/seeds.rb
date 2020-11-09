@@ -40,7 +40,7 @@ Let the mixture cool, then add filling cheese and egg to bind.
 Add tomato sauce to the bottom of your baking dish.
 After the eggplant has cooled, spoon 1-2 Tablespoons of vegetable filling on eggplant, then roll and lay in a baking dish with sauce. Repeat until finished.
 Spoon sauce over eggplant, sprinkle with mozzarella. Cover and bake for 30 minutes, then uncover and bake for 10 minutes. 
-", cheese_id: cheese1.id)
+", cheese_id: cheese1.id, image: "https://cdn.shopify.com/s/files/1/0307/2417/files/55ED29C4-9970-471D-8CB0-38DB6F4DF7E5_1200x.jpg?v=1589324707")
 
 
 course1 = Course.create(name: "Mozzarella Making", image: "https://cdn.thewhoot.com/wp-content/uploads/2020/05/homemade-mozzarella-recipe-.jpg", cheese_id: cheese1.id, instructor_id: instructor1.id, description: "$90 per person including shipping and handling.*

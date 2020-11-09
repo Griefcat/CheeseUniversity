@@ -13,8 +13,12 @@ class CheesesController < ApplicationController
     end
 
     def create
-        @cheese = Cheese.create(cheese_params)
+        @cheese = Cheese.new(cheese_params)
+        if @cheese.save
         redirect_to cheese_path(@cheese)
+        else
+        render 'new'    
+        end
 
     end
 

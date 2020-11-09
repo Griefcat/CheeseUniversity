@@ -5,4 +5,6 @@ class Course < ApplicationRecord
     belongs_to :cheese
     belongs_to :instructor
 
+    validates :name, :description, :image, presence: true
+    validates :name, uniqueness: {case_sensitive: false}
 end

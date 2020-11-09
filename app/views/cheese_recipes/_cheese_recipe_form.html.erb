@@ -1,3 +1,8 @@
+<%if @cheese_recipe.errors.any?%>
+    <%@cheese_recipe.errors.full_messages.each do |m|%>
+        <div><%=m%></div>
+        <%end%>
+ <%end%><br>       
 
 
 <%=form_for @cheese_recipe do |f|%>
@@ -7,6 +12,8 @@
 <%=f.text_area :ingredients%><br>
 <%=f.label :directions%>
 <%=f.text_area :directions%><br>
+<%=f.label :image, "Image url_path"%>
+<%=f.text_field :image%><br>
 <%=f.collection_select :cheese_id, Cheese.all, :id, :name %><br>
 <%=f.submit%>
 <%end%>

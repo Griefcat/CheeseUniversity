@@ -14,9 +14,13 @@ class CoursesController < ApplicationController
     end
 
     def create
-        @course = Course.create(course_params)
-        redirect_to course_path(@course)
-        #is not working!!
+        @course = Course.new(course_params)
+        if @course.valid?
+            @course.save
+            redirect_to course_path(@course)
+        else
+            render 'new'
+        end
     end
 
     def edit
@@ -42,6 +46,6 @@ class CoursesController < ApplicationController
     end
 
     def course_params
-        params.require(:course).permit(:name, :description, :image, :cheese_id, :instructor_id, :user_id)
+        params.require(:course).permit(:name, :description, :image, :cheese_id, :instructor_id)
     end
 end
