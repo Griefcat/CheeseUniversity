@@ -6,6 +6,7 @@ class CheesesController < ApplicationController
     def show
         @cheese = Cheese.find(params[:id])
     end
+    
     def new
    
         @cheese = Cheese.new
