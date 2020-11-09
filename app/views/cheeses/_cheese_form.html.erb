@@ -1,0 +1,11 @@
+<%=form_for @cheese do |f|%>
+<%=f.label :name%>
+<%=f.text_field :name%><br>
+<%=f.label :cheese_type%>
+<%=f.select :cheese_type, ['fresh cheese', 'semi soft', 'hard cheese']%><br>
+<%=f.label :description%>
+<%=f.text_area :description%><br>
+<%=f.label :image, "Image url_path:"%>
+<%=f.text_area :image%><br>
+<%=f.submit%>
+<%end%>

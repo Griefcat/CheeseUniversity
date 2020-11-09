@@ -1,0 +1,10 @@
+<h1>All our courses</h1>
+
+<%@courses.each do |course|%>
+    <div><%=link_to course.name, course_path(course.id)%></div>
+    <div><img src=<%=course.image%>></div>
+    <div><%=course.description%></div>
+    <%end%>
+
+
+    

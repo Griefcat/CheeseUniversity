@@ -1,0 +1,9 @@
+<h1>Our Cheeses</h1>
+
+<% @cheeses.each do |c|%>
+    <div><%=link_to c.name, cheese_path(c.id)%></div>
+
+    <%end%>
+<br>
+
+<%=link_to "create a new cheese", new_cheese_path%>

@@ -1,0 +1,8 @@
+<h1>Cheese Recipes</h1>
+
+<%@cheese_recipes.each do |cr|%>
+    <div><%=link_to cr.name, cheese_recipe_path(cr.id)%></div>
+    <div><%=cr.ingredients%></div>
+<%end%>
+<br><br>
+<%=link_to "Create a new recipe", new_cheese_recipe_path(@cheese_recipe) %>

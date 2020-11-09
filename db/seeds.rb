@@ -14,11 +14,15 @@ Course.destroy_all
 Instructor.destroy_all
 User.destroy_all
 
-cheese1 = Cheese.create(name: "Mozzarella", cheese_type: "Fresh cheese")
+cheese1 = Cheese.create(name: "Mozzarella", cheese_type: "Fresh cheese",
+description: "Mozzarella (English: /ˌmɒtsəˈrɛlə/, Italian: [mottsaˈrɛlla]; Neapolitan: muzzarella [muttsaˈrɛllə]) is a traditionally southern Italian cheese made from Italian buffalo's milk by the pasta filata method.
+
+Fresh mozzarella is generally white but may vary seasonally to slightly yellow depending on the animal's diet.[1] Due to its high moisture content, it is traditionally served the day after it is made[2] but can be kept in brine for up to a week[3] or longer when sold in vacuum-sealed packages. Low-moisture mozzarella can be kept refrigerated for up to a month,[4] though some shredded low-moisture mozzarella is sold with a shelf life of up to six months.[5] Mozzarella of several kinds is used for most types of pizza and several pasta dishes or served with sliced tomatoes and basil in Caprese salad.",
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Mozzarella_di_bufala3.jpg/440px-Mozzarella_di_bufala3.jpg")
 
 instructor1 = Instructor.create(instructor_name: "Waldemar Albrecht", specialty: "Fresh cheese", email: Faker::Internet.email, biography: "Waldemar Albrecht studied law and business administration in his native Venezuela. After immigrating to the US to follow his passion for gastronomy and culinaria, he received training in cheese from industry leaders like Debra Dickerson, Janet Tarlov, Daphne Zepos, and Juliana Uruburu. Managing the cheese counter at the acclaimed Pasta Shop from 1998 through 2002. In May 2003, Waldemar moved to New York City to become a full time Maitre Fromager at Artisanal restaurant, as well as member of the faculty at Artisanal Premium Cheese, nurturing his education through his mentor and friend Max McCalman. Currently, Waldemar works as a spokesperson for Lactalis-USA, conducts food tours with friend and partner Clarisa Penzini, and is the cheese buyer for the Battery Place Markets in Manhattan.", image_url: "https://cdn.shopify.com/s/files/1/0307/2417/files/Waldemar_Albrecht.jpg?1744" )
 
-recipe1 = CheeseRecipe.create(recipe: "Ingredients:
+recipe1 = CheeseRecipe.create(name: "Eggplant Rollatini", ingredients: "
 
 1 large eggplant, sliced into 1/2-inch thick slices
 1 cup each chopped zucchini, mushroom & bell pepper
@@ -29,10 +33,8 @@ recipe1 = CheeseRecipe.create(recipe: "Ingredients:
 1/2 teaspoon each & black pepper, more to taste
 2 1/2 cups tomato sauce (optional)
 1 cup mozzarella cheese
-2 tablespoon fresh parsley, chopped
-Directions:
-
-Preheat the oven to 400F. Carefully slice eggplant into 1/2-inch thick slices. Salt on both sides and let sit to “sweat” for 10 minutes – this is to avoid a watery eggplant rollatini. Pat dry with a paper towel and wipe off remaining salt.
+2 tablespoon fresh parsley, chopped",
+directions: "Preheat the oven to 400F. Carefully slice eggplant into 1/2-inch thick slices. Salt on both sides and let sit to “sweat” for 10 minutes – this is to avoid a watery eggplant rollatini. Pat dry with a paper towel and wipe off remaining salt.
 Lay eggplant on a lightly greased pan and bake for 10 minutes. Remove and let cool.
 While eggplant is baking, rough chop mushrooms, zucchini, and bell pepper. Add oil to the pan and sautee mixture until soft. Finish with garlic and continue stirring.
 Let the mixture cool, then add filling cheese and egg to bind.
@@ -45,7 +47,7 @@ Spoon sauce over eggplant, sprinkle with mozzarella. Cover and bake for 30 minut
 
 user1 = User.create(username: "Cheese Guy1", email: "cheese@cheese.com")
 
-course1 = Course.create(name: "Fresh cheese", user_id: user1.id, cheese_id: cheese1.id, instructor_id: instructor1.id, description: "$90 per person including shipping and handling.*
+course1 = Course.create(name: "Mozzarella Making", image: "https://cdn.thewhoot.com/wp-content/uploads/2020/05/homemade-mozzarella-recipe-.jpg", user_id: user1.id, cheese_id: cheese1.id, instructor_id: instructor1.id, description: "$90 per person including shipping and handling.*
 1-hour tasting class by Zoom with an instructor featuring:
 - Reusable cheesecloth
 - Thermometer

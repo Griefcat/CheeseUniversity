@@ -13,7 +13,9 @@
 ActiveRecord::Schema.define(version: 2020_11_06_172724) do
 
   create_table "cheese_recipes", force: :cascade do |t|
-    t.text "recipe"
+    t.text "directions"
+    t.text "ingredients"
+    t.string "name"
     t.integer "cheese_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -22,12 +24,15 @@ ActiveRecord::Schema.define(version: 2020_11_06_172724) do
   create_table "cheeses", force: :cascade do |t|
     t.string "name"
     t.string "cheese_type"
+    t.string "description"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
+    t.string "image"
     t.integer "user_id"
     t.integer "cheese_id"
     t.integer "instructor_id"

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get '/', to: 'application#home'
+  get '/about', to: 'application#about'
+  
   resources :courses
   resources :cheese_recipes
   resources :instructors

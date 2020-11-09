@@ -1,0 +1,11 @@
+<%=form_for @course do |f|%>
+<%=f.label :name%>
+<%=f.text_field :name%><br>
+<%=f.label :description%>
+<%=f.text_area :description%><br>
+<%=f.label :image, "Image url_path:"%>
+<%=f.text_area :image%><br>
+<%=f.collection_select :cheese_id, Cheese.all, :id, :name %><br>
+<%=f.collection_select :instructor_id, Instructor.all, :id, :instructor_name %><br>
+<%=f.submit%>
+<%end%>

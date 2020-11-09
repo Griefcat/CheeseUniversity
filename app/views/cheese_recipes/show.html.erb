@@ -1,0 +1,11 @@
+<h1><%=@cheese_recipe.name%></h1>
+
+<h3>Ingredients:</h3>
+<%=@cheese_recipe.ingredients%>
+<h3>Directions:</h3>
+<%=@cheese_recipe.directions%>
+<br><br>
+
+<%=link_to "Edit", edit_cheese_recipe_path(@cheese_recipe)%>
+<%=button_to "Delete", cheese_recipe_path(@cheese_recipe), method: "delete"%><br>
+<%=link_to "Back to recipes", cheese_recipes_path%>
