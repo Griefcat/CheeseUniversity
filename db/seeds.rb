@@ -44,7 +44,7 @@ Spoon sauce over eggplant, sprinkle with mozzarella. Cover and bake for 30 minut
 
 user1 = User.create(username: "Cheese Guy1", email: "cheese@cheese.com")
 
-course1 = Course.create(name: "Mozzarella Making", image: "https://cdn.thewhoot.com/wp-content/uploads/2020/05/homemade-mozzarella-recipe-.jpg", user_id: user1.id, cheese_id: cheese1.id, instructor_id: instructor1.id, description: "$90 per person including shipping and handling.*
+course1 = Course.create(name: "Mozzarella Making", image: "https://cdn.thewhoot.com/wp-content/uploads/2020/05/homemade-mozzarella-recipe-.jpg", cheese_id: cheese1.id, instructor_id: instructor1.id, description: "$90 per person including shipping and handling.*
 1-hour tasting class by Zoom with an instructor featuring:
 - Reusable cheesecloth
 - Thermometer

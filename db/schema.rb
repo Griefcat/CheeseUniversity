@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_06_172724) do
+ActiveRecord::Schema.define(version: 2020_11_09_160612) do
 
   create_table "cheese_recipes", force: :cascade do |t|
     t.text "directions"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2020_11_06_172724) do
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.string "image"
-    t.integer "user_id"
     t.integer "cheese_id"
     t.integer "instructor_id"
     t.text "description"
@@ -54,6 +53,13 @@ ActiveRecord::Schema.define(version: 2020_11_06_172724) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users_courses", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "course_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
