@@ -1,10 +1,13 @@
 <h1>All our courses</h1>
 
 <%@courses.each do |course|%>
-    <div><%=link_to course.name, course_path(course.id)%></div>
-    <div><img src=<%=course.image%>% alt='making a mozzarella' width=250px %></div>
+    <div><%=course.name%> <%=button_to "Apply", course_path(course.id), method: "get" %></div>
+    <div><img src=<%=course.image%> alt='making a mozzarella' width=250px %></div>
     <div><%=course.description%></div>
+   
     <%end%>
+<br>
+
 
     <%=link_to "create a course", new_course_path(@course)%>
 
