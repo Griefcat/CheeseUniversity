@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   post '/login', to: 'logins#create', as: 'logged_in'
   get '/signup', to: 'users#new', as: 'new_user'
   post '/signup', to: 'users#create'
-  delete '/logout', to: 'logins#destroy', as: 'logout'
+  get '/logout', to: 'logins#destroy', as: 'logout'
+  delete '/logout', to: 'logins#destroy', as: 'loggedout'
   
   resources :courses
   resources :cheese_recipes
