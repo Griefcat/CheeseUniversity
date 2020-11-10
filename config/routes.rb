@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   get '/', to: 'application#home', as: "home"
   get '/about', to: 'application#about'
-  get '/login', to: 'logins#new', as: "login"
-  get '/signup', to: 'users#new', as: "new_user"
+  get '/login', to: 'logins#new', as: 'login'
+  post '/login', to: 'logins#create', as: 'logged_in'
+  get '/signup', to: 'users#new', as: 'new_user'
   post '/signup', to: 'users#create'
+  delete '/logout', to: 'logins#destroy', as: 'logout'
   
   resources :courses
   resources :cheese_recipes
