@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'users_course/index'
+  get 'users_course/new'
+  get 'users_course/create'
   get '/', to: 'application#home', as: "home"
   get '/about', to: 'application#about'
   get '/login', to: 'logins#new', as: 'login'
@@ -13,6 +16,7 @@ Rails.application.routes.draw do
   resources :instructors
   resources :cheeses
   resources :users
+  resources :users_course
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   

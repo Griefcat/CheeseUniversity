@@ -3,7 +3,14 @@
 <img src=<%=@instructor.image_url%> alt='Photo of Waldemar Albrecht'><br><br>
 <div>
     <%=@instructor.biography%><br><br>
+    
     Contact this instructor:  <%=@instructor.email%>
+</div>
+
+<div>I can teach you:
+    <%@instructor.courses.each do |c|%>
+        <div><%=c.name%></div>
+    <%end%>
 </div>
 <br>
 <br>

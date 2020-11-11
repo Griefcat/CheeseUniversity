@@ -1,7 +1,7 @@
 <h1>Our Instructors</h1>
-
+<h3>Click in the instructor for more information</h3>
 <% @instructors.each do |instructor|%>
-    <div><%=link_to instructor.instructor_name, instructor_path(instructor.id)%></div>
+    <div><img src=<%=instructor.image_url%>><%=link_to instructor.instructor_name, instructor_path(instructor.id)%></div>
 
     <%end%>
 <br>
