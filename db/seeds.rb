@@ -12,7 +12,6 @@ CheeseRecipe.destroy_all
 Cheese.destroy_all
 Course.destroy_all
 Instructor.destroy_all
-User.destroy_all
 
 cheese1 = Cheese.create(name: "Mozzarella", cheese_type: "fresh cheese", description: "Mozzarella (English: /ˌmɒtsəˈrɛlə/, Italian: [mottsaˈrɛlla]; Neapolitan: muzzarella [muttsaˈrɛllə]) is a traditionally southern Italian cheese made from Italian buffalo's milk by the pasta filata method. Fresh mozzarella is generally white but may vary seasonally to slightly yellow depending on the animal's diet.[1] Due to its high moisture content, it is traditionally served the day after it is made[2] but can be kept in brine for up to a week[3] or longer when sold in vacuum-sealed packages. Low-moisture mozzarella can be kept refrigerated for up to a month,[4] though some shredded low-moisture mozzarella is sold with a shelf life of up to six months.[5] Mozzarella of several kinds is used for most types of pizza and several pasta dishes or served with sliced tomatoes and basil in Caprese salad.",
 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Mozzarella_di_bufala3.jpg/440px-Mozzarella_di_bufala3.jpg")

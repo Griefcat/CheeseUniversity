@@ -1,13 +1,18 @@
 <div class="header">
     <%= link_to "Home", home_path %>
+    <%= link_to "About", about_path%>
+    <%= link_to "Courses", courses_path%>
     <%= link_to "Instructors", instructors_path %>
     <%= link_to "Cheeses", cheeses_path %>
+    <%= link_to "Cheese Recipes", cheese_recipes_path%>
+    
 
 
 <%if logged_in?%>
 <%="Welcome back, #{session[:user_id]}"%>
 <%=link_to "Logout", logout_path, method: "delete"%>
 <%else%>
+<%=link_to "Sign Up", signup_path%>
 <%=link_to "Login", login_path%>
 <%end%>
 
