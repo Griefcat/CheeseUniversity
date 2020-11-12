@@ -1,11 +1,12 @@
 <h1>Sign up for access to all things cheese!</h1>
 
 
-
+<div class="form-group container text-center">
 <%= form_with url: "/signup" do |f| %>
-  Username : <%= f.text_field :username %>
-  Email : <%= f.email_field :email %>
-  Password : <%= f.password_field :password %>
-  Password Confirmation : <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
+  Username : <div class="form-control"><%= f.text_field :username %></div>
+  Email : <div class="form-control"><%= f.email_field :email %></div>
+  Password : <div class="form-control"><%= f.password_field :password %></div>
+  Password Confirmation : <div class="form-control"><%= f.password_field :password_confirmation %></div>
+  <div class="btn btn-default"><%= f.submit "Submit" %></div>
 <% end %> 
+</div>
