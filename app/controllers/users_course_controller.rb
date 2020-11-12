@@ -15,6 +15,13 @@ class UsersCourseController < ApplicationController
     @users_course = UsersCourse.find(params[:id])
   end
 
+  def destroy
+    @users_course = UsersCourse.find(params[:id])
+    @users_course.delete
+    redirect_to courses_path
+  end
+
+
   private
 
   def users_course_params
