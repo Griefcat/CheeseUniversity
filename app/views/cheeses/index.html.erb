@@ -1,12 +1,15 @@
-<div class="container text-center">
-<h1>Our Cheeses</h1>
+<div class="container text-center row">
+
 
 <% @cheeses.each do |c|%>
-    <div><%=link_to c.name, cheese_path(c.id)%></div>
+    <div class="col "><%=link_to c.name, cheese_path(c.id)%></div>
+    <div class="col "><img src=<%=c.image%> width=150px class="rounded-circle"></div>
 
     <%end%>
 <br>
 
-<%=link_to "create a new cheese", new_cheese_path%>
+<!--<%=link_to "create a new cheese", new_cheese_path%>-->
 
 </div>
+
+<img src="https://i.imgur.com/0oW6qOq.png" class="cheese_lines_logo">
