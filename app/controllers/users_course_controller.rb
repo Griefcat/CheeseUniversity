@@ -11,6 +11,9 @@ class UsersCourseController < ApplicationController
     @users_course.save
     redirect_to users_course_path(@users_course)
   end
+  def show
+    @users_course = UsersCourse.find(params[:id])
+  end
 
   private
 
