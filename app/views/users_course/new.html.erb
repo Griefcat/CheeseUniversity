@@ -1,13 +1,14 @@
 <h1>Welcome <%=session[:user_id]%></h1>
 
-<h3>Please fill the form with all your info and choose your course </h3>
+<h3>choose your course </h3>
 
-<%=form_with url: '/users_course/create' do |f|%>
-    <%=f.label :username%>
-    <%=f.text_field :username%><br>
+<%=form_with url: users_course_index_path do |f|%>
     
     
-    <%=f.collection_select :user_id, User.all, :id, :username%>
+    <%=f.label :user_id%>
+    
+    <%=f.hidden_field :user_id, value: session[:user_id] %>
+
     <%=f.collection_select :course_id, Course.all, :id, :name%><br>
     <%=f.submit "Apply"%>
 <%end%>
