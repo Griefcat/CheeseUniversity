@@ -9,7 +9,8 @@
 
 <div class='user_navbar'>
 <%if logged_in?%>
-<%="Welcome back, #{session[:user_id]}"%>
+<%="Welcome back, #{current_user.username}"%>
+<%=link_to "Your Courses", user_path(current_user)%>
 <%=link_to "Logout", logout_path, method: "delete"%>
 <%else%>
 <%=link_to "Sign Up", signup_path%>
