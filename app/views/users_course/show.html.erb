@@ -1,11 +1,9 @@
-<h1>Welcome <%=@users_course.user.username%></h1>
+<h1><%=@users_course.user.username%>'s Courses</h1>
 
-<div>Your Course
-<%=@users_course.course.name%>
+<div>Your Course:  <%=@users_course.course.name%>
 </div>
-<div>Your Teacher is: <%=@users_course.course.instructor.instructor_name%></div>
-<div>Information of the class:
- <%=@users_course.course.description%></div>
+<div>Your Teacher is:  <%=@users_course.course.instructor.instructor_name%></div>
+<div>Information of the class:  <%=@users_course.course.description%></div>
 
  <br><br>
  <%=button_to "Delete this course", users_course_path(@users_course), method: "delete"%>

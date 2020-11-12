@@ -4,7 +4,8 @@
   <%= form_with url: '/login' do |f| %>
   Username: <div class="form-control"><%= f.text_field :username %></div>
   Password: <div class="form-control"><%= f.password_field :password %></div>
-  Password Confirmation: <%= f.password_field :password_confirmation %></div>
+  
   <div class="btn btn-default"><%= f.submit "Submit" %></div>
   <% end %> 
 </div>
+

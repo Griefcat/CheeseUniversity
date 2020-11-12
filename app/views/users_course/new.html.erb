@@ -1,6 +1,6 @@
-<h1>Welcome <%=session[:user_id]%></h1>
+<h1>Welcome <%=current_user.username%></h1>
 
-<h3>choose your course </h3>
+<h2>choose your course </h2>
 
 <%=form_with url: users_course_index_path do |f|%>
     
