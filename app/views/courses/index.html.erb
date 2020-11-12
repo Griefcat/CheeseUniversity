@@ -1,6 +1,6 @@
+<div class="container text-center">
 <h1>All our courses</h1>
 
-<div class="container text-center">
     <%@courses.each do |course|%>
         <div><%=course.name%> <%=button_to "Apply", new_users_course_path, method: "get" %></div>
         <div><img src=<%=course.image%> alt='making a mozzarella' width=250px %></div>

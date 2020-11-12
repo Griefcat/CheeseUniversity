@@ -21,10 +21,19 @@
     padding: 0;
     text-decoration: none;
 }
+
+body{
+  background-image: url(https://i.imgur.com/0oW6qOq.png);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+
+}
 .navbar{
     width: 100%;
   height: 50px;
-  background-color: #cccdc9;
+  background-color: #b1bb90;
   text-transform: uppercase;
   text-align: center;
   line-height: 50px;
@@ -48,9 +57,22 @@
 .user_navbar{
   width: 100%;
   height: 40px;
-  background-color: #6a96e0;
+  background-color: #ebeba9;
   text-transform: uppercase;
   text-align: right;
   line-height: 50px;
-  
+  padding-right: 50px;
+  text-decoration: none;
 }
+
+.logo {
+  width: 350px;
+  opacity: 0.5;
+
+//  display: block;
+//  margin-left: auto;
+//  margin-right: auto;
+//  width: 50%;
+}
+
+

@@ -8,23 +8,13 @@
   </div>  
 
 <div class='user_navbar'>
-<<<<<<< HEAD
     <%if logged_in?%>
-    <%="Welcome back, #{session[:user_id]}"%>
+    <%="Welcome back, #{current_user.username}"%>
+    <%=link_to "Your Courses", user_path(current_user)%>
     <%=link_to "Logout", logout_path, method: "delete"%>
     <%else%>
     <%=link_to "Sign Up", signup_path%>
     <%=link_to "Login", login_path%>
     <%end%>
-=======
-<%if logged_in?%>
-<%="Welcome back, #{current_user.username}"%>
-<%=link_to "Your Courses", user_path(current_user)%>
-<%=link_to "Logout", logout_path, method: "delete"%>
-<%else%>
-<%=link_to "Sign Up", signup_path%>
-<%=link_to "Login", login_path%>
-<%end%>
->>>>>>> ee55368ddfea8d8675205e43659ba78aa0a37913
 
 </div>
