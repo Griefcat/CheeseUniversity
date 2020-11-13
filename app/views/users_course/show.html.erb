@@ -1,3 +1,5 @@
+
+<div class="container text-center">
 <h1><%=@users_course.user.username%>'s Courses</h1>
 
 <div>Your Course:  <%=@users_course.course.name%>
@@ -7,3 +9,4 @@
 
  <br><br>
  <%=button_to "Delete this course", users_course_path(@users_course), method: "delete"%>
+</div>

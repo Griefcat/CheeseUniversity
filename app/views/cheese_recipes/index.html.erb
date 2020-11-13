@@ -2,8 +2,8 @@
 
 <div class="row">
 <%@cheese_recipes.each do |cr|%>
-    <div class="col"><%=link_to cr.name, cheese_recipe_path(cr.id)%></div>
-    <img src=<%=cr.image%> width=250px height=250px class="rounded-circle">
+    <%=link_to cr.name, cheese_recipe_path(cr.id)%>
+    <div class="col"><img src=<%=cr.image%> width=250px height=250px class="rounded-circle"></div>
     <div class="container-lg pt-3 my-3 border"><%=cr.ingredients%></div>
 <%end%>
 </div>

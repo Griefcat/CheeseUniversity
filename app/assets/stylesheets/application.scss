@@ -26,7 +26,7 @@
 .navbar{
     width: 100%;
   height: 50px;
-  background-color: #b1bb90;
+  background-color: rgb(227, 198, 123);
   text-transform: uppercase;
   text-align: center;
   line-height: 50px;
@@ -50,7 +50,7 @@
 .user_navbar{
   width: 100%;
   height: 40px;
-  background-color: #ebeba9;
+  background-color: rgb(252, 235, 149);
   text-transform: uppercase;
   text-align: right;
   line-height: 50px;
@@ -73,3 +73,7 @@
 
 }
 
+.jumbotron {
+  background-color: rgb(204, 164, 94); /* Orange */
+  color: #ffffff;
+}

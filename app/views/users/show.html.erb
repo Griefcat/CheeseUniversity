@@ -1,11 +1,13 @@
 <h1><%=@user.username%>'s Courses</h1>
+<div class="container text-center row">
 
 <%@user.courses.each do |course|%>
-Course: <%=course.name%><br>
-Instructor: <%=course.instructor.instructor_name%><br>
-<%course.description%>
+<div class="col "><strong>Course: <%=course.name%></strong><br>
+Instructor: <%=course.instructor.instructor_name%>
+<img src=<%=course.image%> width=250px class="rounded-circle"></div>
+
 <%end%>
 
-<h2>A form for applying and create the relation between course and user</h2>
+</div>
 
-<h3>users_course views</h3>
+
