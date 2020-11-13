@@ -7,6 +7,8 @@
 <div>Your Teacher is:  <%=@users_course.course.instructor.instructor_name%></div>
 <div>Information of the class:  <%=@users_course.course.description%></div>
 
- <br><br>
+ <br>
+ <%=link_to "Your Courses", user_path(current_user)%>
+ <br>
  <%=button_to "Delete this course", users_course_path(@users_course), method: "delete"%>
 </div>
