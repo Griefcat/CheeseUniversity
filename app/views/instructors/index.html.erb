@@ -1,8 +1,12 @@
-<h1>Our Instructors</h1>
-<h3>Click in the instructor for more information</h3>
+<div class="container text-center row">
+
+
 <% @instructors.each do |instructor|%>
-    <div><img src=<%=instructor.image_url%>><%=link_to instructor.instructor_name, instructor_path(instructor.id)%></div>
+    <div class="col "><img src=<%=instructor.image_url%> class="rounded-circle"><%=link_to instructor.instructor_name, instructor_path(instructor.id)%></div>
 
     <%end%>
 <br>
 
+</div>
+
+<img src="https://i.imgur.com/0oW6qOq.png" class="cheese_lines_logo">

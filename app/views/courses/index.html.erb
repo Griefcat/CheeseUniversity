@@ -1,16 +1,20 @@
-<h1>All our courses</h1>
-
 <div class="container text-center">
+
+
+    <div class="row">
     <%@courses.each do |course|%>
-        <div><%=course.name%> <%=button_to "Apply", new_users_course_path, method: "get" %></div>
-        <div><img src=<%=course.image%> alt='making a mozzarella' width=250px %></div>
-        <div><%=course.description%></div>
+        
+            <div class="col"><strong><%=course.name%></strong><%=button_to "Apply", new_users_course_path, method: "get" %>
+            <img src=<%=course.image%> alt='making a mozzarella' width=250px %></div><br>
+            <div class="container-sm pt-3 my-3 border"><%=course.description%></div>
+            <%end%><br>
+            
     
-        <%end%>
-    <br>
+    
 
 
-    <%=link_to "create a course", new_course_path(@course)%>
+
+   <!--<%=link_to "create a course", new_course_path(@course)%>-->
 
 </div>
     

@@ -1,8 +1,11 @@
-<h1>Cheese Recipes</h1>
+<div class="container text-center">
 
+<div class="row">
 <%@cheese_recipes.each do |cr|%>
-    <div><%=link_to cr.name, cheese_recipe_path(cr.id)%></div>
-    <div><%=cr.ingredients%></div>
+    <%=link_to cr.name, cheese_recipe_path(cr.id)%>
+    <div class="col"><img src=<%=cr.image%> width=250px height=250px class="rounded-circle"></div>
+    <div class="container-lg pt-3 my-3 border"><%=cr.ingredients%></div>
 <%end%>
-<br><br>
-<%=link_to "Create a new recipe", new_cheese_recipe_path(@cheese_recipe) %>
+</div>
+<!--<%=link_to "Create a new recipe", new_cheese_recipe_path(@cheese_recipe) %>-->
+</div>

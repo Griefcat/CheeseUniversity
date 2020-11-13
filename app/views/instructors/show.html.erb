@@ -1,4 +1,4 @@
-<h1>More info on this instructor</h1>
+<div class="container text-center">
 
 <img src=<%=@instructor.image_url%> alt='Photo of Waldemar Albrecht'><br><br>
 <div>
@@ -7,10 +7,10 @@
     Contact this instructor:  <%=@instructor.email%>
 </div>
 
-<div>I can teach you:
+<div>Specialties:
     <%@instructor.courses.each do |c|%>
         <div><%=c.name%></div>
     <%end%>
 </div>
-<br>
-<br>
+</div>
+<img src="https://i.imgur.com/0oW6qOq.png" class="cheese_lines_logo">

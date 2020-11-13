@@ -3,14 +3,24 @@ class UsersCourseController < ApplicationController
   end
 
   def new
+    
+    if session[:user_id]
+      render 'new'
+    else
+      render 'users/new'
+    end
   end
 
   def create
     
     @users_course = UsersCourse.new(users_course_params)
-    @users_course.save
-    redirect_to users_course_path(@users_course)
+    
+      @users_course.save
+      redirect_to users_course_path(@users_course)
+    
+    
   end
+
   def show
     @users_course = UsersCourse.find(params[:id])
   end

@@ -1,11 +1,12 @@
+<div class="container text-center">
 <h1><%=@cheese.name%></h1>
 
 <img src=<%=@cheese.image%> alt='mozzarela cheese' width=250px><br>
 <%=@cheese.description%>
 <br><br>
 
-<%=link_to "Edit", edit_cheese_path(@cheese)%>
-<%=button_to "Delete", cheese_path(@cheese), method: "delete"%><br>
+<!--<%=link_to "Edit", edit_cheese_path(@cheese)%>
+<%=button_to "Delete", cheese_path(@cheese), method: "delete"%><br>-->
 <%=link_to "Back to our cheeses", cheeses_path%>
 
-
+</div>
